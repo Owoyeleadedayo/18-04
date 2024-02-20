@@ -1,4 +1,3 @@
-import React from 'react'
 import Nav from '../components/Nav'
 import { Box,  Flex, Heading, useMediaQuery } from '@chakra-ui/react';
 import MobileNav from '../components/MobileNav';
