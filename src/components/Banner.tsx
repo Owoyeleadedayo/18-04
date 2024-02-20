@@ -1,5 +1,4 @@
 import { Box, Flex, Heading, Text, useMediaQuery } from '@chakra-ui/react';
-import React from 'react'
 import Nav from './Nav';
 import MobileNav from './MobileNav';
 import image from "../assets/Images/hero.png";
