@@ -1,4 +1,3 @@
-import React from 'react'
 import { Flex, Box, Collapse, useDisclosure, Text, Heading, Button, Link } from '@chakra-ui/react'
 import { IoMenu } from "react-icons/io5";
 import Colors from '../constants/colors';

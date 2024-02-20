@@ -1,5 +1,4 @@
 import { Card, CardBody, Flex, Grid, GridItem, Heading, Image, Stack, Text } from '@chakra-ui/react';
-import React from 'react'
 import Image2 from "../assets/Images/blog-2.jpg";
 
 

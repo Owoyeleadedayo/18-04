@@ -1,5 +1,4 @@
 import { Box, Button, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react';
-import React from 'react'
 import Image3 from "../assets/Images/about.jpg";
 
 
