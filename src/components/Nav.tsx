@@ -2,7 +2,7 @@ import { Flex, Heading, Link, Text } from '@chakra-ui/react'
 const Nav = () => {
     const handlescroll = () => {
         const nav = document.getElementById("nav");
-        if(window.scrollY <= 50){
+        if(window.scrollY >= 40){
             nav?.classList.add('scrolled-to-top');
         }else{
             nav?.classList.remove("scrolled-to-top");
@@ -44,10 +44,9 @@ const Nav = () => {
       justifyContent={"space-between"}
       alignItems={"center"}
       px={"100px"}
-      bgColor={"#1d2434"}
-      position={"sticky"}
-      top={"0px"}
-      py={"8px"}
+      bgColor={"rgba(0,0,0,0.1)"}
+      position={"relative"}
+      py={"16px"}
       id="nav"
       transition={"all 0.3s ease"}
       zIndex={99}

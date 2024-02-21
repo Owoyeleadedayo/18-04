@@ -72,7 +72,9 @@ button:focus-visible {
   }
 }
 .scrolled-to-top{
-  background-color: rgba(0,0,0,0.1) !important;
-  padding-top: 16px !important;
-  padding-bottom: 16px !important;
+  position: fixed !important;
+  top: 0px !important;
+  background-color:  #1d2434 !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
 }

@@ -7,7 +7,7 @@ const FirstNav = () => {
     <>
       <Flex
         alignItems={"center"}
-        height={"0%"}
+        height={"75px"}
         width={"full"}
         bg={Colors.purple}
         display={{md:"flex", base:"none"}}
