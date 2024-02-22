@@ -10,9 +10,8 @@ const PriceSection = () => {
           pt={{ lg: "100px", base: "50px" }}
           bg={"white"}
           flexDirection={"column"}
-          gap={"50px"}
           px={{ lg: "80px", base: "20px" }}
-          mb={{ lg: "100px", base: "50px" }}
+          // mb={{ lg: "100px", base: "50px" }}
         >
           <Stack
             display={"flex"}

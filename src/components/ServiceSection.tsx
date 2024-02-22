@@ -11,7 +11,7 @@ const ServiceSection = () => {
           flexDirection={"column"}
           gap={"50px"}
           px={{ lg: "80px", base: "20px" }}
-          my={{ lg: "100px", base: "50px" }}
+          // mb={{ lg: "100px", base: "50px" }}
         >
           <Flex
             display={"flex"}
@@ -44,7 +44,11 @@ const ServiceSection = () => {
             </Heading>
           </Flex>
           <Grid
-            templateColumns={{ lg: "repeat(3, 1fr)", base: "repeat(1, 1fr)" }}
+            templateColumns={{
+              lg: "repeat(3, 1fr)",
+              md: "repeat(2, 1fr)",
+              base: "repeat(1, 1fr)",
+            }}
             gap={"20px"}
           >
             <GridItem>

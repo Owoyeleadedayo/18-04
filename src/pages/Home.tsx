@@ -4,6 +4,7 @@ import PriceSection from "../components/PriceSection";
 import ServiceSection from "../components/ServiceSection";
 import AboutSection from "../components/AboutSection";
 import Banner from "../components/Banner";
+import BarberSection from "../components/BarberSection";
 const Home = () => {
   return (
     <>
@@ -11,6 +12,7 @@ const Home = () => {
       <AboutSection />
       <ServiceSection />
       <PriceSection />
+      <BarberSection />
       <ContactSection />
       <Footer />
     </>

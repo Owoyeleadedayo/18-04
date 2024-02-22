@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import Price from './pages/Price';
 import Contact from './pages/Contact';
 import FirstNav from './components/FirstNav';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/price" element={<Price />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -37,6 +37,11 @@ const Nav = () => {
         path: "/contact",
         id: 5,
       },
+      {
+        name: "Gallery",
+        path: "/gallery",
+        id: 6,
+      },
     ];
   return (
     <Flex
@@ -52,21 +57,22 @@ const Nav = () => {
       zIndex={99}
     >
       <Flex>
-        <Heading color={"white"}>
+        <Heading color={"white"} fontFamily={"Roboto"}>
           18-
-          <Text as={"span"} fontWeight={900}>
+          <Text as={"span"} fontFamily={"Roboto"}>
             04
           </Text>
         </Heading>
       </Flex>
-      <Flex color={"white"} width={"30%"} gap={"10px"} alignItems={"center"}>
+      <Flex color={"white"} width={"40%"} gap={"10px"} alignItems={"center"}>
         {navlinks.map((link) => (
           <Link
             fontSize={"17px"}
             href={link.path}
+            fontFamily={"Roboto"}
             fontWeight={400}
             textTransform={"uppercase"}
-            px={"6px"}
+            px={"8px"}
             py={"8px"}
             _hover={{
               textDecoration: "none",
