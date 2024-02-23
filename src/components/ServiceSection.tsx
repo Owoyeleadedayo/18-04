@@ -11,7 +11,7 @@ const ServiceSection = () => {
           flexDirection={"column"}
           gap={"50px"}
           px={{ lg: "80px", base: "20px" }}
-          // mb={{ lg: "100px", base: "50px" }}
+          pb={{ lg: "100px", base: "50px" }}
         >
           <Flex
             display={"flex"}

@@ -17,6 +17,7 @@ const Footer = () => {
           w={"100%"}
           justifyContent={{ lg: "none", base: "center" }}
           alignItems={{ lg: "none", base: "center" }}
+          mt={{ lg: "30px", base: "50px" }}
         >
           <Grid
             templateColumns={{ lg: "repeat(3, 1fr)", base: "repeat(1, 1fr)" }}

@@ -19,7 +19,7 @@ const Banner = () => {
         {isLargerThan767 ? <Nav /> : <MobileNav />}
         <Flex
           px={{ lg: "60px", base: "20px" }}
-          height={{ lg: "calc(100vh - 350px)", base: "200px" }}
+          height={{ lg: "calc(100vh - 350px)", base: "230px" }}
           display={"flex"}
           alignItems={{ lg: "flex-start", base: "center" }}
           justifyContent={"center"}
@@ -39,7 +39,7 @@ const Banner = () => {
             fontSize={{ lg: "24px", base: "24px" }}
             fontFamily={"Roboto"}
             textAlign={"center"}
-            maxW={{ lg: "600px", base: "400px" }}
+            maxW={{ lg: "600px", md: '600px', base: "400px" }}
           >
             Lorem ipsum dolor sit amet elit. Phasell nec pretum mi. Curabi
             ornare velit non. Aliqua metus tortor auctor quis sem.

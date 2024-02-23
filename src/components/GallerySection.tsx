@@ -1,4 +1,4 @@
-import { Flex, Heading, Stack, Text, Grid, GridItem, Image,} from "@chakra-ui/react"
+import { Flex, Heading, Stack, Text, Grid, GridItem, Image, Modal, ModalOverlay, useDisclosure, ModalContent, ModalBody, ModalFooter, Button,} from "@chakra-ui/react"
 import { useState } from "react";
 import Image3 from "../assets/Images/portfolio-1.jpg";
 import Image4 from "../assets/Images/portfolio-3.jpg";
@@ -9,7 +9,9 @@ import Image8 from "../assets/Images/portfolio-5.jpg";
 
 
 const GallerySection = () => {
-    // const { isOpen, onOpen, onClose } = useDisclosure();
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [modalImage, setModalImage] = useState('');
+
     const things = [
       {
         name: "",
@@ -52,6 +54,7 @@ const GallerySection = () => {
         
     }
 
+    
   return (
     <>
       <Flex
@@ -180,8 +183,8 @@ const GallerySection = () => {
           gap={"20px"}
         >
           {filteredArray.map((item, index: number) => (
-            <GridItem key={index} >
-              <Flex position={"relative"} width={"100%"}>
+            <GridItem key={index}>
+              <Flex position={"relative"} width={"100%"} onClick={()=> {setModalImage(item.image); onOpen()}}>
                 <Image
                   src={item.image}
                   width={"100%"}
@@ -206,6 +209,36 @@ const GallerySection = () => {
             </GridItem>
           ))}
         </Grid>
+        <Modal isOpen={isOpen} onClose={onClose} isCentered>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalBody p={0}>
+              <Image src={modalImage} w={'100%'} />
+            </ModalBody>
+            <ModalFooter>
+              <Button
+                justifyContent={'center'}
+                alignContent={'center'}
+                w={'130px'}
+                my={0}
+                fontSize={'18px'}
+                fontWeight={600}
+                mx={'auto'}
+                bg={"#D5B981"}
+                color={"#1d2434"}
+                border={"1px solid #D5B981"}
+                outline={"none !important"}
+                _hover={{
+                  border: "1px solid #D5B981",
+                  outline: "none !important",
+                }}
+                onClick={onClose}
+              >
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
       </Flex>
     </>
   );

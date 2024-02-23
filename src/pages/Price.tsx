@@ -14,6 +14,7 @@ const About = () => {
         backgroundRepeat={"no-repeat"}
         bgPosition={"top right"}
         background-blend-mode={"soft-light"}
+        mb={{ lg: "100px", base: "50px" }}
       >
         {isLargerThan767 ? <Nav /> : <MobileNav />}
         <Flex

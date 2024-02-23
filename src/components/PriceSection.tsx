@@ -7,11 +7,10 @@ const PriceSection = () => {
     <>
       <section>
         <Flex
-          pt={{ lg: "100px", base: "50px" }}
           bg={"white"}
           flexDirection={"column"}
           px={{ lg: "80px", base: "20px" }}
-          // mb={{ lg: "100px", base: "50px" }}
+          pb={{ lg: "100px", base: "50px" }}
         >
           <Stack
             display={"flex"}

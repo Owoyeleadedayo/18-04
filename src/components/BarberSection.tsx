@@ -9,8 +9,8 @@ const BarberSection = () => {
         flexDirection={"column"}
         gap={"50px"}
         px={{ lg: "80px", base: "20px" }}
-        mt={{ lg: "80px", base: "50px" }}
-        mb={{ lg: "150px", base: "50px" }}
+        mt={{ lg: "0px", base: "50px" }}
+        mb={{ lg: "0px", base: "50px" }}
       >
         <Stack
           display={"flex"}

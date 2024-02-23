@@ -3,6 +3,7 @@ import { Box,  Flex, Heading, useMediaQuery } from '@chakra-ui/react';
 import MobileNav from '../components/MobileNav';
 import AboutSection from '../components/AboutSection';
 import Footer from '../components/Footer';
+import BarberSection from '../components/BarberSection';
 
 
 const About = () => {
@@ -32,6 +33,7 @@ const About = () => {
         </Flex>
       </Box>
       <AboutSection />
+      <BarberSection />
       <Footer />
     </>
   );
