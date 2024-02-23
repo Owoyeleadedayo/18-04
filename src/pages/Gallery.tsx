@@ -2,6 +2,7 @@ import { Box, Flex, Heading, useMediaQuery } from "@chakra-ui/react";
 import Nav from "../components/Nav";
 import MobileNav from "../components/MobileNav";
 import GallerySection from "../components/GallerySection";
+import Footer from "../components/Footer";
 
 const Gallery = () => {
       const [isLargerThan767] = useMediaQuery("(min-width: 769px)");
@@ -28,6 +29,7 @@ const Gallery = () => {
           </Heading>
         </Flex>
         <GallerySection />
+        <Footer />
       </Box>
     </>
   );
