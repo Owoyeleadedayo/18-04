@@ -1,4 +1,4 @@
-import { Flex, Heading, Stack, Text, Grid, GridItem, Image, useDisclosure} from "@chakra-ui/react"
+import { Flex, Heading, Stack, Text, Grid, GridItem, Image,} from "@chakra-ui/react"
 import { useState } from "react";
 import Image3 from "../assets/Images/portfolio-1.jpg";
 import Image4 from "../assets/Images/portfolio-3.jpg";
@@ -9,7 +9,7 @@ import Image8 from "../assets/Images/portfolio-5.jpg";
 
 
 const GallerySection = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
+    // const { isOpen, onOpen, onClose } = useDisclosure();
     const things = [
       {
         name: "",
