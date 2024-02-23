@@ -184,7 +184,14 @@ const GallerySection = () => {
         >
           {filteredArray.map((item, index: number) => (
             <GridItem key={index}>
-              <Flex position={"relative"} width={"100%"} onClick={()=> {setModalImage(item.image); onOpen()}}>
+              <Flex
+                position={"relative"}
+                width={"100%"}
+                onClick={() => {
+                  setModalImage(item.image);
+                  onOpen();
+                }}
+              >
                 <Image
                   src={item.image}
                   width={"100%"}
@@ -213,24 +220,26 @@ const GallerySection = () => {
           <ModalOverlay />
           <ModalContent>
             <ModalBody p={0}>
-              <Image src={modalImage} w={'100%'} />
+              <Image src={modalImage} w={"100%"} />
             </ModalBody>
             <ModalFooter>
               <Button
-                justifyContent={'center'}
-                alignContent={'center'}
-                w={'130px'}
+                justifyContent={"center"}
+                alignContent={"center"}
+                w={"130px"}
                 my={0}
-                fontSize={'18px'}
+                fontSize={"18px"}
                 fontWeight={600}
-                mx={'auto'}
+                mx={"auto"}
                 bg={"#D5B981"}
                 color={"#1d2434"}
-                border={"1px solid #D5B981"}
                 outline={"none !important"}
                 _hover={{
-                  border: "1px solid #D5B981",
-                  outline: "none !important",
+                  border: "1px solid #1d2434 !important",
+                  outline: "1px solid #1d2434 !important",
+                }}
+                _focus={{
+                  background: "#D5B981 !important",
                 }}
                 onClick={onClose}
               >
