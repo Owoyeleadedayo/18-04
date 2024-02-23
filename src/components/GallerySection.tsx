@@ -15,32 +15,32 @@ const GallerySection = () => {
     const things = [
       {
         name: "",
-        type: "hair_cut",
+        type: "maleHair",
         image: Image3,
       },
       {
         name: "",
-        type: "beard_style",
+        type: "femaleHair",
         image: Image4,
       },
       {
         name: "",
-        type: "color_wash",
+        type: "maleHair",
         image: Image5,
       },
       {
         name: "",
-        type: "color_wash",
+        type: "femaleHair",
         image: Image6,
       },
       {
         name: "",
-        type: "hair_cut",
+        type: "femaleHair",
         image: Image7,
       },
       {
         name: "",
-        type: "beard_style",
+        type: "maleHair",
         image: Image8,
       },
     ];
@@ -133,10 +133,10 @@ const GallerySection = () => {
               background: "#1d2434",
               color: "#D5B981",
             }}
-            onClick={() => filterThingsArray("hair_cut")}
+            onClick={() => filterThingsArray("maleHair")}
           >
             <Text fontSize={"14px"} fontFamily={"Roboto"} fontWeight={600}>
-              Hair Style
+              Male Hair
             </Text>
           </Flex>
           <Flex
@@ -152,29 +152,10 @@ const GallerySection = () => {
               background: "#1d2434",
               color: "#D5B981",
             }}
-            onClick={() => filterThingsArray("beard_style")}
+            onClick={() => filterThingsArray("femaleHair")}
           >
             <Text fontSize={"14px"} fontFamily={"Roboto"} fontWeight={600}>
-              Beard Style
-            </Text>
-          </Flex>
-          <Flex
-            border={"2px solid #1d2434"}
-            py={"8px"}
-            px={"15px"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            color={"#1d2434"}
-            transition={".3s"}
-            cursor={"pointer"}
-            _hover={{
-              background: "#1d2434",
-              color: "#D5B981",
-            }}
-            onClick={() => filterThingsArray("color_wash")}
-          >
-            <Text fontSize={"14px"} fontFamily={"Roboto"} fontWeight={600}>
-              Color & Wash
+              Female Hair
             </Text>
           </Flex>
         </Flex>
