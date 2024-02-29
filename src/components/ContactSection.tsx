@@ -1,8 +1,44 @@
-import { Box, Button, Flex, Input, Stack, Textarea } from '@chakra-ui/react';
+import { Box, Button, Flex,  Input, Stack, Textarea } from '@chakra-ui/react';
 import Image3 from "../assets/Images/about.jpg";
+import {  useState } from "react";
+import emailjs from "@emailjs/browser";
+
 
 
 const ContactSection = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
+      e.preventDefault();
+
+      const serviceId = "service_2fk96r4";
+      const templateId = "template_li66gbl";
+      const publicKey = "3oeULxCaRc6LiSFmJ";
+
+
+      const templateParams = {
+          from_name: name,
+          from_email: email,
+          subject: message,
+          to_name: "18-04",
+          message: message,
+        };
+
+        emailjs.send(serviceId, templateId, templateParams, publicKey)
+          .then((response) => {
+            console.log('Email sent successfully', response);
+            setName('');
+            setEmail('');
+            setSubject('');
+            setMessage('');
+          })
+          .catch((error) => {
+            console.log('Error sending email', error);
+          });
+      }
   return (
     <>
       <section>
@@ -34,6 +70,8 @@ const ContactSection = () => {
               <Flex flexDirection={"column"} gap={"40px"}>
                 <Input
                   placeholder={"Your Name"}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   bg={"none"}
                   border={"none"}
                   borderBottom={"1px solid #D5B981"}
@@ -64,6 +102,8 @@ const ContactSection = () => {
                 />
                 <Input
                   placeholder={"Your Email"}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   bg={"none"}
                   border={"none"}
                   borderBottom={"1px solid #D5B981"}
@@ -94,6 +134,8 @@ const ContactSection = () => {
                 />
                 <Input
                   placeholder={"Subject"}
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                   bg={"none"}
                   border={"none"}
                   borderBottom={"1px solid #D5B981"}
@@ -124,6 +166,8 @@ const ContactSection = () => {
                 />
                 <Textarea
                   placeholder={"Message"}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   bg={"none"}
                   border={"none"}
                   borderBottom={"1px solid #D5B981"}
@@ -173,6 +217,7 @@ const ContactSection = () => {
                   _focusVisible={{
                     outline: "none !important",
                   }}
+                  onClick={handleSubmit}
                 >
                   Send Message
                 </Button>
