@@ -1,7 +1,9 @@
 import { Box, Button, Flex,  Input, Stack, Textarea } from '@chakra-ui/react';
 import Image3 from "../assets/Images/about.jpg";
-import {  useState } from "react";
+import {   useState } from "react";
 import emailjs from "@emailjs/browser";
+ import { toast } from "react-toastify";
+// type Timeout = ReturnType<typeof setTimeout>;
 
 
 
@@ -10,6 +12,7 @@ const ContactSection = () => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState('');
+
 
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
       e.preventDefault();
@@ -34,9 +37,19 @@ const ContactSection = () => {
             setEmail('');
             setSubject('');
             setMessage('');
+            toast.success("Email sent successfully", {
+              autoClose: 4000,
+              hideProgressBar: true,
+              theme: "light",
+            });
           })
           .catch((error) => {
             console.log('Error sending email', error);
+            toast.error("Error sending email", {
+              autoClose: 5000,
+              hideProgressBar: true,
+              theme: "light",
+            });
           });
       }
   return (
